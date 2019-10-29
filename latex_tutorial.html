@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/additions.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css">
+        <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h1>LaTeX</h1>
+                    <h3>Doing it right for your thesis</h3>
+                    <p>Peter W. Smith</p>
+                </section>
+				<section>Slide 1
+                    <li><i class="fab fa-apple" aria-hidden="true"></i> Hello
+                    </li>
+                        <li>
+                            <i class="fab fa-github-square"></i>
+                        </li> <!-- uses brands style -->
+                        <i class="fab fa-windows"></i>
+                        <i class="fab fa-linux" aria-hidden="true"></i>
+                        <p><i class="fa fa-link" aria-hidden="true"> https://pwsmith.github.io</i>
+                        </p>
+
+                </section>
+				<section>
+                    <h2>Using the right editor</h2>
+                </section>
+                <section>
+                    <h3>Why?</h3>
+                    <ul>
+                        <li>The right editor can make a <b>big</b> difference.</li>
+                        <li>A good editor will:</li>
+                        <ul>
+                            <li class="fragment">enable code snippets</li>
+                            <li class="fragment">have bibliography intergration</li>
+                            <li class="fragment">let you compile LaTeX directly</li>
+                            <li class="fragment">save you <b>a lot</b> of typing</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>An <span class='italic'>excellent</span> text editor will:</li>
+                        <ul>
+                            <li>work cross platform</li>
+                            <li>be easily customisable</li>
+                            <li>Have direct git integration</li>
+                            <li>do half the work for you</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Which editor?</h3>
+                    <p>I need a long sentence to see how things pan out.</p>
+                    <ul>
+                        <li><span class='boldface'>Atom</span></li>
+                        <li>Sublime Text</li>
+                        <li>VS Code</li>
+                        <li>Emacs</li>
+                        <li>Vim</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Atom</h3>
+                    <ul>
+                        <img style="height: 200px"; src="images/sublime_logo.png" alt="hello">
+                        <li><a href="https://atom.io/">https://atom.io</a></li>
+                        <li>"A hackable text editor for the 21st Century"</li>
+                        <li>Developed by Github</li>
+                        <li>Open source, highly customisable</li>
+
+                    </ul>
+                </section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                history: true,
+                center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+				]
+			});
+		</script>
+	</body>
+</html>
