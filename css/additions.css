@@ -156,6 +156,7 @@ body {
 
 .container{
     display: flex;
+    align-items: center;
   }
   
   .col {
