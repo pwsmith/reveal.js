@@ -232,7 +232,7 @@ body {
       color: #205b9f;
     }
 
-span.emphasisgreen {
+.emphasisgreen {
   color: #039f64;
 }
 
@@ -325,3 +325,40 @@ span.emphasisorange {
     margin-left: 1em;
   }
 
+/****** Advantages/Disadvantages ****/
+
+ul .adv {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.adv li {
+  list-style-type: none;
+  /* padding-left: 1em; */
+  text-indent: -1em;
+}
+
+.adv li::before {
+  content: "✔";
+  color:#37a500;
+    /* font-family: "Font Awesome 5 Free Solid"; */
+}
+
+ul .disadv {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.disadv li {
+  list-style-type: none;
+  /* padding-left: 1em; */
+  text-indent: -1em;
+}
+
+.disadv li::before {
+  content: "✘";
+  color:#df4736;
+    /* font-family: "Font Awesome 5 Free Solid"; */
+}
