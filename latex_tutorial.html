@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/moon.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -31,24 +31,11 @@
     <div class="reveal">
         <div class="slides">
             <section>
-                <h1>LaTeX</h1>
+                <h2>LaTeX:</h2>
                 <h3>Doing it right for your thesis</h3>
                 <p>Peter W. Smith</p>
             </section>
-            <section>Slide 1
-                <li><i class="fab fa-apple" aria-hidden="true"></i> Hello
-                </li>
-                <li>
-                    <i class="fab fa-github-square"></i>
-                </li> <!-- uses brands style -->
-                <i class="fab fa-windows"></i>
-                <i class="fab fa-linux" aria-hidden="true"></i>
-                <p><i class="fa fa-link" aria-hidden="true"> https://pwsmith.github.io</i>
-                    <i class="fa fa-rocket fa-spin"></i>
-
-                </p>
-
-            </section>
+            
             <section>
                 <h2>Using the right editor</h2>
             </section>
@@ -59,8 +46,9 @@
                     <li>A good editor will:</li>
                     <ul>
                         <li class="fragment">enable code snippets</li>
-                        <li class="fragment">have bibliography intergration</li>
+                        <li class="fragment">have bibliography integration</li>
                         <li class="fragment">let you compile LaTeX directly</li>
+                        <li class="fragment">help you manage your project</li>
                         <li class="fragment">save you <b>a lot</b> of typing</li>
                     </ul>
                 </ul>
@@ -70,22 +58,37 @@
                 <ul>
                     <li>An <span class='italic'>excellent</span> text editor will:</li>
                     <ul>
-                        <li>work cross platform</li>
-                        <li>be easily customisable</li>
-                        <li>Have direct git integration</li>
-                        <li>do half the work for you</li>
+                        <li class="fragment">be easily customisable</li>
+                        <li class="fragment">work cross platform</li>
+                        <li class="fragment">have direct git integration</li>
+                        <li class="fragment">do half the work for you</li>
                     </ul>
                 </ul>
             </section>
             <section>
                 <h3>Which editor?</h3>
-                <p>I need a long sentence to see how things pan out.</p>
+                <p></p>
                 <ul>
-                    <li><span class='boldface'>Atom</span></li>
-                    <li>Sublime Text</li>
-                    <li>VS Code</li>
-                    <li>Emacs</li>
-                    <li>Vim</li>
+                    <li>Often users will stick with the editor that comes with the LaTeX installation.</li>
+                    <ul>
+                        <li><i class="fab fa-apple"></i> = TexShop</li>
+                        <li><i class="fab fa-windows"></i> = Texworks</li>
+                        <li><i class="fab fa-linux"></i> = Various</li>
+                    </ul>
+                    <li>Often they are not the most sophisticated editors.</li>
+                    <li>Advanced features may be difficult to configure.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Which editor?</h3>
+                <ul>
+                    <li>In my experience, the following are the best editors.</li>
+                    <li>None are LaTeX specific, but for software development.</li>
+                    <li>All (except Sublime) are open source.</li>
+                    <li class="fragment"><span class='boldface'>Good</span>: they are more advanced, and have bigger
+                        communities working on them.</li>
+                    <li class="fragment"><span class='boldface'>Bad</span>: they come with bigger installations and use
+                        more system resources.</li>
                 </ul>
             </section>
             <section>
@@ -270,19 +273,257 @@
                 </div>
                 <p class='fragment'>(I don't use Vim enough to give advantages/disadvantages)</p>
             </section>
+
+
             <section>
-                <img class='stretch' src="images/Peek 2019-10-30 12-11.gif" alt="">
+                <h2>Using your editor the right way</h2>
             </section>
             <section>
-                <pre>
-                        <code class="tex">
-\begin{document}
+                <h3>Getting started</h3>
+                <ol>
+                    <li class="fragment">Download your editor of choice.</li>
+                    <li class="fragment">Install LaTeX builder.</li>
+                    <li class="fragment">Install LaTeX language support.</li>
+                    <li class="fragment">Go.</li>
+                </ol>
+            </section>
+            <section>
+                <h3>Demo</h3>
+                <ol>
+                    <li>Go to <a href="https://atom.io">https://atom.io</a>, download and install.</li>
+                    <li>Open, hit <code>ctrl+,</code>/<code>cmd+,</code> and click
+                        'install' on the left.</li>
+                    <li>Search 'latextools' and install it</li>
+                    <li>Search for 'language-latex'</li>
+                    <li>Search for and install 'pdf-view'</li>
+                    <li>Now, you're good to go.</li>
+                </ol>
+            </section>
+            <section>
+                <h3>Atom + Latextools: Basic Workflow</h3>
+                <ul>
+                    <li>Open .tex file.</li>
+                    <li>Write something latex-y</li>
+                    <li>Hit <code>ctrl-alt-b</code> or <code>cmd-alt-b</code></li>
+                    <li>It should then open in the pdf-viewer at the side.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Other commands: latextools</h3>
+                <ul>
+                    <li><code>ctrl-l escape</code>/<code>cmd-l escape</code> = close console</li>
+                    <li><code>ctrl-l ctrl-n</code>/<code>cmd-l cmd-n</code> = wrap in environment</li>
+                    <li><code>ctrl-l j</code>/<code>cmd-l j</code> = jump to pdf</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Saving yourself time: snippets</h3>
+                <ul>
+                    <li>Atom, Sublime, VSCode etc. allow you to define your own pieces of code, that insert wider
+                        chuncks.</li>
+                    <li>Idea</li>
+                    <ol>
+                        <li>type a sequence of characters (<span class='boldface'>snippet</span>) and hit
+                            <code>tab</code>.</li>
+                        <li>The <span class='boldface'>content</span> of the snippet will then be inserted</li>
+                    </ol>
+                </ul>
+            </section>
+            <section>
+                <!-- <h3>Example</h3> -->
+                <img class="stretch" src="images/not_my_bee.gif" alt="">
+            </section>
 
-Add something here, with \textsc{something} in small caps.
+            <section>
+                <h3>Writing Snippets in Atom</h3>
+                <ul>
+                    <li>Snippets need four things:</li>
+                    <ol>
+                        <li>Scope <span class="fragment">= which language it will work in</span></li>
+                        <li>Name <span class="fragment">= for comprehension</span></li>
+                        <li>Prefix <span class="fragment">= the shortcut</span></li>
+                        <li>Body <span class="fragment">= what is inserted</span> </li>
+                    </ol>
+                </ul>
+            </section>
 
-\end{document}
-                        </code>
-                    </pre>
+            <section>
+                <img class="stretch" src="images/snippets.png" alt="">
+            </section>
+
+            <section>
+                <h2>Unicode</h2>
+            </section>
+
+            <section>
+                <h3>Clarity</h3>
+                <ul>
+                    <li>Useful for non-latin characters and diacritics.</li>
+                    <li>LaTeX markup is messy, especially with symbols.</li>
+                    <li>Some are intutive: <code>\v{s}</code> = š</li>
+                    <li>Others are not: <code>\textipa{@}</code> = ə</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Unicode</h3>
+                <ul>
+                    <li>Unicode is useful because you type the characters directly, using a standardised code.</li>
+                    <li>Requirements:</li>
+                    <ol>
+                        <li>Unicode compatible font.</li>
+                        <li>The right code.</li>
+                        <li>Ability to input the code.</li>
+                    </ol>
+                </ul>
+            </section>
+            <section>
+                <h3>Unicode: Advantages</h3>
+                <ul>
+                    <li>Your writing is a lot more readable in the editor.</li>
+                    <li>You can reuse the code: just copy paste into email, markdown documents, excel, word etc.</li>
+                    <li>Works well in bibliographies (with <a href="http://biblatex-biber.sourceforge.net/">Biber</a>).</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Unicode fonts</h3>
+                <ul>
+                    <li><a href="http://libertine-fonts.org/">Libertine</a></li>
+                    <li><a href="https://software.sil.org/doulos/">Doulos SIL</a></li>
+                    <li><a href="https://software.sil.org/charis/">Charis SIL</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Inputing the code</h3>
+                <ul>
+                    <li>System: <code>ctrl-shift-u</code> in linux.</li>
+                    <li>Within the editor:</li>
+                    <ul>
+                        <li>Atom: <a href="https://atom.io/packages/character-table">Character Table</a></li>
+                        <li>VSCode: <a href="https://marketplace.visualstudio.com/items?itemName=brunnerh.insert-unicode">Insert Unicode</a></li>
+                        <li>Emacs: <code>ctrl-x 8 enter</code></li>
+                        <li>Sublime: <span class='italic'>not honestly sure. There used to be Character Table, but it's disappeared of late.</span></li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <h3>The right code</h3>
+                <ul>
+                    <li><a href="http://www.unicode.org/charts/"">The Unicode Consortium</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode">Wikipedia Phonetic Symbols</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Combining_character">Wikipedia Combining Characters</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Version Control</h2>
+            </section>
+
+            <section>
+                <h3>Keeping a history</h3>
+                <ul>
+                    <li>It's a good idea to keep a record of your work.</li>
+                    <li class="fragment" data-fragment-index="1">Something you write may be a bad idea.</li>
+                    <li class="fragment" data-fragment-index="1">So you get rid of it.</li>
+                    <li class="fragment">Then it turns out to be a good idea.</li>
+                    <li class="fragment">Then what?</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Twists and turns of a crappy idea.</h3>
+                <ul>
+                    <li><span class='boldface'>Best case scenario</span>: you just commented it out.</li>
+                    <li class="fragment">Problem: you may have this a lot (I did) and your file becomes unreadable.</li>
+
+
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h3>Twists and turns of a crappy idea</h3>
+                    <ul>
+                        <li><span class='boldface'>Middle case scenario</span>: wary of delete, you start a new file.
+                        </li>
+                        <li class="fragment">Problem: you end up with a billion versions of your dissertation.</li>
+                    </ul>
+                </section>
+                <section>
+                    <!-- <h2>Something</h2> -->
+                    <img class="stretch" src="images/file_names.gif" alt="">
+                </section>
+            </section>
+            <section>
+                <h3>Twists and turns of a crappy idea</h3>
+                <ul>
+                    <li><span class='boldface'>Worst case scenario</span>: you delete it from your .tex file.</li>
+                    <li class="fragment">Problem: not much to do from here. Try to redo all your work.</li>
+                </ul>
+            </section>
+            <section>
+                <h3><i class="fab fa-git"></i></h3>
+                <ul>
+                    <li>Learn to use <i class="fab fa-git"></i>, even if in just a basic way.</li>
+                    <li><i class="fab fa-git"></i> keeps a history of your document <span class='italic fragment'>within
+                            that document.</span></li>
+                    <li class="fragment"><i class="fab fa-git"></i> is free, with many open source tools to help.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>How does it work?</h3>
+                <ul>
+                    <li>Works only on plain text files.</li>
+                    <li>Creates snapshots of your work, by comparing them to the previous state.</li>
+                    <li>You can save a new snapshot ("commit") whenever you want.</li>
+                    <li>Possible to go back to previous versions ("a previous commit") of your work.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Advantages</h3>
+                <ul>
+                    <li>Flexible version history of your work.</li>
+                    <li>It's smart: multiple users can work on the same file.</li>
+                    <li>Combined with git hosting services, you can store your work online.</li>
+                    <li>It's free!</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h3>Learn by doing</h3>
+                    <ul>
+                        <li>Check if git is on your system.</li>
+                        <li>Open a terminal window, and type:</li>
+                    </ul>
+                    <pre><code>
+                    git --version
+                </code></pre>
+                    <ul>
+                        <li>If you get something like, the following, you're good.</li>
+                    </ul>
+                    <img src="images/git_version.png" alt="">
+
+                </section>
+                <section>
+                    <h3>If not, then install</h3>
+                    <ul>
+                        <li>Go to <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> and download
+                            the right installer.</li>
+                        <li>Follow the relevant steps for your system.</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h3>Learn by doing</h3>
+                <ul>
+                    <li>You can use git from the command line, but you may want to install a GUI.</li>
+                    <li>Good ones:</li>
+                    <ul>
+                        <li><i class="fab fa-gitkraken"></i>
+                            <a href="https://www.gitkraken.com/">Gitkraken</a></li>
+                        <li><i class="fab fa-sourcetree"></i> <a href="https://www.sourcetreeapp.com/">Sourcetree</a>
+                        </li>
+                        <li><i class="fab fa-github"></i> <a href="https://desktop.github.com/">Github Desktop</a>
+                        </li>
+                    </ul>
+                </ul>
             </section>
         </div>
     </div>
