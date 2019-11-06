@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <link rel="stylesheet" href="css/additions.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>Git</h2>
+                <h3>Keeping track of your work</h3>
+                <p>Peter W. Smith</p>
+            </section>
+            
+<section>
+    <h2>Version Control</h2>
+</section>
+
+<section>
+    <h3>Keeping a history</h3>
+    <ul>
+        <li>It's a good idea to keep a record of your work.</li>
+        <li class="fragment" data-fragment-index="1">Something you write may be a bad idea.</li>
+        <li class="fragment" data-fragment-index="1">So you get rid of it.</li>
+        <li class="fragment">Then it turns out to be a good idea.</li>
+        <li class="fragment">Then what?</li>
+    </ul>
+</section>
+<section>
+    <h3>Twists and turns of a crappy idea.</h3>
+    <ul>
+        <li><span class='boldface'>Best case scenario</span>: you just commented it out.</li>
+        <li class="fragment">Problem: you may have this a lot (I did) and your file becomes unreadable.</li>
+
+
+    </ul>
+</section>
+<section>
+    <section>
+        <h3>Twists and turns of a crappy idea</h3>
+        <ul>
+            <li><span class='boldface'>Middle case scenario</span>: wary of delete, you start a new file.
+            </li>
+            <li class="fragment">Problem: you end up with a billion versions of your dissertation.</li>
+        </ul>
+    </section>
+    <section>
+        <!-- <h2>Something</h2> -->
+        <img class="stretch" src="images/file_names.gif" alt="">
+    </section>
+</section>
+<section>
+    <h3>Twists and turns of a crappy idea</h3>
+    <ul>
+        <li><span class='boldface'>Worst case scenario</span>: you delete it from your .tex file.</li>
+        <li class="fragment">Problem: not much to do from here. Try to redo all your work.</li>
+    </ul>
+</section>
+<section>
+    <h3><i class="fab fa-git"></i></h3>
+    <ul>
+        <li>Learn to use <i class="fab fa-git"></i>, even if in just a basic way.</li>
+        <li><i class="fab fa-git"></i> keeps a history of your document <span class='italic fragment'>within
+                that document.</span></li>
+        <li class="fragment"><i class="fab fa-git"></i> is free, with many open source tools to help.</li>
+    </ul>
+</section>
+<section>
+    <h3>How does it work?</h3>
+    <ul>
+        <li>Works only on plain text files.</li>
+        <li>Creates snapshots of your work, by comparing them to the previous state.</li>
+        <li>You can save a new snapshot ("commit") whenever you want.</li>
+        <li>Possible to go back to previous versions ("a previous commit") of your work.</li>
+    </ul>
+</section>
+<section>
+    <h3>Advantages</h3>
+    <ul>
+        <li>Flexible version history of your work.</li>
+        <li>It's smart: multiple users can work on the same file.</li>
+        <li>Combined with git hosting services, you can store your work online.</li>
+        <li>It's free!</li>
+    </ul>
+</section>
+<section>
+    <section>
+        <h3>Learn by doing</h3>
+        <ul>
+            <li>Check if git is on your system.</li>
+            <li>Open a terminal window, and type:</li>
+        </ul>
+        <pre><code>
+        git --version
+    </code></pre>
+        <ul>
+            <li>If you get something like, the following, you're good.</li>
+        </ul>
+        <img src="images/git_version.png" alt="">
+
+    </section>
+    <section>
+        <h3>If not, then install</h3>
+        <ul>
+            <li>Go to <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> and download
+                the right installer.</li>
+            <li>Follow the relevant steps for your system.</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <h3>Learn by doing</h3>
+    <ul>
+        <li>You can use git from the command line, but you may want to install a GUI.</li>
+        <li>Good ones:</li>
+        <ul>
+            <li><i class="fab fa-gitkraken"></i>
+                <a href="https://www.gitkraken.com/">Gitkraken</a></li>
+            <li><i class="fab fa-sourcetree"></i> <a href="https://www.sourcetreeapp.com/">Sourcetree</a>
+            </li>
+            <li><i class="fab fa-github"></i> <a href="https://desktop.github.com/">Github Desktop</a>
+            </li>
+        </ul>
+    </ul>
+</section>
+
+</div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true,
+        center: true,
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true },
+        ]
+    });
+</script>
+</body>
+
+</html>

@@ -288,6 +288,7 @@
                 </ol>
             </section>
             <section>
+            <section>
                 <h3>Demo</h3>
                 <ol>
                     <li>Go to <a href="https://atom.io">https://atom.io</a>, download and install.</li>
@@ -298,6 +299,30 @@
                     <li>Search for and install 'pdf-view'</li>
                     <li>Now, you're good to go.</li>
                 </ol>
+            </section>
+            <section>
+                <h3>Using Markdown instead</h3>
+                <ul>
+                    <li>If you are writing in markdown then converting to a latexed output (using <a href="https:/pandoc.org">pandoc</a>), Atom is easy to set up for markdown.</li>
+                    <li>Install <a href="https://atom.io/packages/markdown-writer">Markdown-writer</a>.</li>
+                    <li>ensure <a href="https://atom.io/packages/language-markdown">language-markdown is installed</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>RMarkdown</h3>
+                <ul>
+                    <li>If you use RMarkdown, there is no dedicated environment, like RStudio.</li>
+                    <li>But, you can follow the above steps to enable markdown support, then call <span class='boldface'>knitr</span> from your terminal.</li>
+                    <li>To do so, run the commands:</li>
+                </ul>
+                <pre>
+                    <code>
+$ R
+> install.packages('rmarkdown')
+> rmarkdown::render('FILE.Rmd')
+                    </code>
+                </pre>
+            </section>
             </section>
             <section>
                 <h3>Atom + Latextools: Basic Workflow</h3>
@@ -413,6 +438,43 @@
                     <li><a href="https://en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode">Wikipedia Phonetic Symbols</a></li>
                     <li><a href="https://en.wikipedia.org/wiki/Combining_character">Wikipedia Combining Characters</a></li>
                 </ul>
+            </section>
+            <section>
+                <h2>Misc Tips</h2>
+            </section>
+            <section>
+            <section>
+                <h3>Handling larget documents</h3>
+                <ul>
+                    <li>For a thesis, it's a good idea to keep each chapter as its own file, and compile from a master file.</li>
+                    <li>Use the <code>\include{}</code> command.</li>
+                    <li class="fragment">(or use <code>\input{}</code>)</li>
+                </ul>
+            </section>
+            <section>
+                <pre>
+                    <code>
+\documentclass{memoir}
+...
+\title{Thesis}
+\author{G. K. Candidate}
+\date{Summer 2020}
+
+\begin{document}
+
+\include{intro.tex}
+\include{theoretical_background.tex}
+\include{content1.tex}
+\include{content2.tex}
+\include{content3.tex}
+\include{conclusions.tex}
+
+\printbibliography
+
+    \end{document}
+                    </code>
+                </pre>
+            </section>
             </section>
             <section>
                 <h2>Version Control</h2>
