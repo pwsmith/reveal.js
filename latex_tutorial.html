@@ -16,6 +16,8 @@
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <!--load all styles -->
     <link rel="stylesheet" href="css/additions.css">
+    <link rel="stylesheet" href="plugin/reveal.js-fullscreen-code/reveal.js-fullscreen-code.css">
+
 
     <!-- Printing and PDF exports -->
     <script>
@@ -34,6 +36,29 @@
                 <h2>LaTeX:</h2>
                 <h3>Doing it right for your thesis</h3>
                 <p>Peter W. Smith</p>
+                <p>Follow along: <a href="https://pwsmith.github.io/reveal.js/latex_tutorial.html">https://pwsmith.github.io/reveal.js/latex_tutorial.html</a></p>
+            </section>
+
+            <section>
+                <h3>Writing your PhD</h3>
+                <div class='container'>
+                    <div class="col">
+                        Step one
+                        <br>
+                        <p class="fragment" data-fragment-index="1">Sit down to write.</p>
+                    </div>
+                    <div class="col">
+                        Step two
+                        <br>
+                        <p class="fragment" data-fragment-index="3">???</p>
+                    </div>
+                    <div class="col">
+                        Step three
+                        <br>
+                        <p class="fragment" data-fragment-index="2">Get PhD.</p>
+                    </div>
+                </div>
+                <a class="fragment" data-fragment-index="4" href="https://miro.medium.com/max/2560/1*oaJlY6rLTVKnCCwrjCItMA.jpeg">Source.</a>
             </section>
             
             <section>
@@ -459,134 +484,19 @@ $ R
 \title{Thesis}
 \author{G. K. Candidate}
 \date{Summer 2020}
-
 \begin{document}
-
 \include{intro.tex}
 \include{theoretical_background.tex}
 \include{content1.tex}
 \include{content2.tex}
-\include{content3.tex}
 \include{conclusions.tex}
-
 \printbibliography
-
-    \end{document}
+\end{document}
                     </code>
                 </pre>
             </section>
             </section>
-            <section>
-                <h2>Version Control</h2>
-            </section>
-
-            <section>
-                <h3>Keeping a history</h3>
-                <ul>
-                    <li>It's a good idea to keep a record of your work.</li>
-                    <li class="fragment" data-fragment-index="1">Something you write may be a bad idea.</li>
-                    <li class="fragment" data-fragment-index="1">So you get rid of it.</li>
-                    <li class="fragment">Then it turns out to be a good idea.</li>
-                    <li class="fragment">Then what?</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Twists and turns of a crappy idea.</h3>
-                <ul>
-                    <li><span class='boldface'>Best case scenario</span>: you just commented it out.</li>
-                    <li class="fragment">Problem: you may have this a lot (I did) and your file becomes unreadable.</li>
-
-
-                </ul>
-            </section>
-            <section>
-                <section>
-                    <h3>Twists and turns of a crappy idea</h3>
-                    <ul>
-                        <li><span class='boldface'>Middle case scenario</span>: wary of delete, you start a new file.
-                        </li>
-                        <li class="fragment">Problem: you end up with a billion versions of your dissertation.</li>
-                    </ul>
-                </section>
-                <section>
-                    <!-- <h2>Something</h2> -->
-                    <img class="stretch" src="images/file_names.gif" alt="">
-                </section>
-            </section>
-            <section>
-                <h3>Twists and turns of a crappy idea</h3>
-                <ul>
-                    <li><span class='boldface'>Worst case scenario</span>: you delete it from your .tex file.</li>
-                    <li class="fragment">Problem: not much to do from here. Try to redo all your work.</li>
-                </ul>
-            </section>
-            <section>
-                <h3><i class="fab fa-git"></i></h3>
-                <ul>
-                    <li>Learn to use <i class="fab fa-git"></i>, even if in just a basic way.</li>
-                    <li><i class="fab fa-git"></i> keeps a history of your document <span class='italic fragment'>within
-                            that document.</span></li>
-                    <li class="fragment"><i class="fab fa-git"></i> is free, with many open source tools to help.</li>
-                </ul>
-            </section>
-            <section>
-                <h3>How does it work?</h3>
-                <ul>
-                    <li>Works only on plain text files.</li>
-                    <li>Creates snapshots of your work, by comparing them to the previous state.</li>
-                    <li>You can save a new snapshot ("commit") whenever you want.</li>
-                    <li>Possible to go back to previous versions ("a previous commit") of your work.</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Advantages</h3>
-                <ul>
-                    <li>Flexible version history of your work.</li>
-                    <li>It's smart: multiple users can work on the same file.</li>
-                    <li>Combined with git hosting services, you can store your work online.</li>
-                    <li>It's free!</li>
-                </ul>
-            </section>
-            <section>
-                <section>
-                    <h3>Learn by doing</h3>
-                    <ul>
-                        <li>Check if git is on your system.</li>
-                        <li>Open a terminal window, and type:</li>
-                    </ul>
-                    <pre><code>
-                    git --version
-                </code></pre>
-                    <ul>
-                        <li>If you get something like, the following, you're good.</li>
-                    </ul>
-                    <img src="images/git_version.png" alt="">
-
-                </section>
-                <section>
-                    <h3>If not, then install</h3>
-                    <ul>
-                        <li>Go to <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> and download
-                            the right installer.</li>
-                        <li>Follow the relevant steps for your system.</li>
-                    </ul>
-                </section>
-            </section>
-            <section>
-                <h3>Learn by doing</h3>
-                <ul>
-                    <li>You can use git from the command line, but you may want to install a GUI.</li>
-                    <li>Good ones:</li>
-                    <ul>
-                        <li><i class="fab fa-gitkraken"></i>
-                            <a href="https://www.gitkraken.com/">Gitkraken</a></li>
-                        <li><i class="fab fa-sourcetree"></i> <a href="https://www.sourcetreeapp.com/">Sourcetree</a>
-                        </li>
-                        <li><i class="fab fa-github"></i> <a href="https://desktop.github.com/">Github Desktop</a>
-                        </li>
-                    </ul>
-                </ul>
-            </section>
+            
         </div>
     </div>
 
@@ -604,6 +514,8 @@ $ R
                 { src: 'plugin/markdown/markdown.js' },
                 { src: 'plugin/notes/notes.js', async: true },
                 { src: 'plugin/highlight/highlight.js', async: true },
+            //     { src: 'plugin/reveal.js-fullscreen-code/jquery-3.1.1.min.js' },
+            // { src: 'plugin/reveal.js-fullscreen-code/reveal.js-fullscreen-code.js' }
             ]
         });
     </script>
