@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/beige.css">
+    <link rel="stylesheet" href="css/theme/blood.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -34,7 +34,7 @@
                 <h2>Git</h2>
                 <h3>Keeping track of your work</h3>
                 <p>Peter W. Smith</p>
-                <p>Follow along: <a href="https://pwsmith.github.io/revealjs/git_tutorial.html"></a>https://pwsmith.github.io/revealjs/git_tutorial.html</p>
+                <p>Follow along: <a href="https://pwsmith.github.io/reveal.js/git_tutorial.html">https://pwsmith.github.io/reveal.js/git_tutorial.html</a></p>
             </section>
             
 <section>
@@ -130,6 +130,7 @@
             <li>Go to <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> and download
                 the right installer.</li>
             <li>Follow the relevant steps for your system.</li>
+            <li><a href="https://www.atlassian.com/git/tutorials/install-git">Good tutorial for all systems</a></li>
         </ul>
     </section>
 </section>
@@ -141,7 +142,7 @@
         <ul>
             <li><i class="fab fa-gitkraken"></i>
                 <a href="https://www.gitkraken.com/">Gitkraken</a></li>
-            <li><i class="fab fa-sourcetree"></i> <a href="https://www.sourcetreeapp.com/">Sourcetree</a>
+            <li><i class="fab fa-sourcetree"></i> <a href="https://www.sourcetreeapp.com/">Sourcetree (Mac/Windows only)</a>
             </li>
             <li><i class="fab fa-github"></i> <a href="https://desktop.github.com/">Github Desktop</a>
             </li>
@@ -174,9 +175,22 @@
 
 <section>
     <h3>How to git: Initialise</h3>
-    <ul>
-        <li>In Gitkraken: navigate to X</li>
-    </ul>
+    <div class='container'>
+        <div class='col'>
+            <ul>
+                <li>In Gitkraken:</li>
+                <ul>
+                    <li>File > Init Repo</li>
+                    <li>or: <code>ctrl+I/cmd+I</code></li>
+                </ul>
+            </ul>
+        </div>
+        <div class='colgrow'>
+            <img src="images/gk_init.png" alt="">
+
+        </div>
+    </div>
+    
 </section>
 
 <section>
@@ -229,6 +243,77 @@
         <li>But, it is <span class='boldface'>not</span> automatic, so you <span class='boldface'>must</span> commit your changes and <span class='boldface'>push</span> them to the remote.</li>
     </ul>
 </section>
+
+<section>
+    <h3>Syncing the repo to Github</h3>
+    <ol>
+        <li class="fragment" data-fragment-index="1">Connect Gitkraken to your Github account.</li>
+        <ul>
+            <li class="fragment"  data-fragment-index="1">Preferences > Authentication > Github > Connect to Github</li>
+        </ul>
+        <li class="fragment">Click 'continue authorization'.</li>
+        <li class="fragment">Add in your login credentials.</li>
+        <li class="fragment">You're good.</li>
+    </ol>
+</section>
+<section>
+    <h3>Create a Github repo</h3>
+    <img src="images/github_new.png" alt="">
+</section>
+<section>
+    <h3>Fill out info</h3>
+    <img width=85% src="images/github_gitignore.png" alt="">
+    <ul>
+        <li><span class='boldface'>Tip</span>: Initialise with a TeX .gitignore file.</li>
+    </ul>
+</section>
+<section>
+    <h3>Clone the repo</h3>
+    <div class='container'>
+        <div class='col'>
+            <ol>
+                <li>File > Clone Repo</li>
+                <li>Select 'Github.com'</li>
+                <li>Specify location</li>
+                <li>Select repo to clone</li>
+                <li>Clone the repo!</li>
+            </ol>
+        </div>
+        <div class='colgrow'>
+            <img src="images/github_clone.png" alt="">
+        </div>
+    </div>
+    
+</section>
+
+<section>
+    <h3>Work, commit + push</h3>
+    <div class='container'>
+        <div class='col'>
+            <ul>
+                <li>Go through the normal workflow.</li>
+                <li>When ready to sync, click 'Push'</li>
+            </ul>
+        </div>
+        <div class='colgrow'>
+            <img src="images/gk_push.png" alt="">
+        </div>
+    </div>
+    
+</section>
+
+<section>
+    <h3>Useful links:</h3>
+    <ul>
+        <li><a href="https://www.atlassian.com/git/tutorials">Tutorials by Atlassian</a></li>
+        <li><a href="https://try.github.io/">Resources from Github</a></li>
+        <li><a href="https://www.davidbaumgold.com/tutorials/command-line/">Using the command line (David Baumgold)</a></li>
+    </ul>
+</section>
+
+<section data-background-image="images/kertst-rendier.jpg">
+<h3>Merry Christmas!</h3>
+</section>
 </div>
 </div>
 
@@ -241,6 +326,10 @@
     Reveal.initialize({
         history: true,
         center: true,
+        parallaxBackgroundImage: 'images/kerstboom.jpg',
+        parallaxBackgroundSize: '2100px 1500px',
+        parallaxBackgroundHorizontal: 30,
+	    parallaxBackgroundVertical: 50,
         dependencies: [
             { src: 'plugin/markdown/marked.js' },
             { src: 'plugin/markdown/markdown.js' },
