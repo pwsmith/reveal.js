@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='author' content='Pete'>
+<title>Hello</title>
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui'>
+<link rel='stylesheet' href='css/reset.css'>
+<link rel='stylesheet' href='css/reveal.css'>
+<link rel='stylesheet' type='text/css' href='js/leaflet/leaflet.css' />
+<script type='text/javascript' src='js/leaflet/leaflet.js'></script>
+<script type='text/javascript' src='js/leaflet/leafletembed.js'></script>
+<script type='text/javascript' src='js/leaflet/numbermap.js'></script>
+<link rel='stylesheet' href='css/theme/sof.css' id='theme'>
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+<!--[if lt IE 9]>
+<script src='reveal.js/lib/js/html5shiv.js'></script>
+<![endif]-->
+<link rel='stylesheet' href='/home/pwsmith/Documents/Technical_Writing/Html_Linguistics.css'>
+</head>
+<body>
+<div class='reveal'>
+<div class='slides'>
+<section class='front' id='title-slide'>
+<div class='front_container'>
+<div class='front_info'>
+<h1 class='title'>Hello</h1>
+<p class='subtitle'>World</p>
+<p class='author'>Peter W. Smith</p>
+<p class='date'>Dec 2019</p>
+</div>
+<div class='front_logo'>
+<img class='logo' src='GU-Logo-schwarz.png'>
+</div>
+</div>
+</section>
+
+<section>
+    <div class="example-container">
+        <div class="individual-example">
+            <div class="example-number"><p class='ex'></p></div>
+            <div class="ab-counter"><p class='ab'></p></div>
+            <div class="judgement"><p></p></div>
+            <div class="example-sentence"><p>Example sentence</p></div>
+        </div>
+        <div class="individual-example">
+            <div class="example-number"><p></p></div>
+            <div class="ab-counter"><p class='ab'></p></div>
+            <div class="judgement"><p>?</p></div>
+            <div class="example-sentence"><p>Example sentence</p></div>
+        </div>
+        <div class="individual-example">
+            <div class="example-number"><p></p></div>
+            <div class="ab-counter"><p class='ab'></p></div>
+            <div class="judgement"><p>*</p></div>
+            <div class="example-sentence"><p>Example sentence</p></div>
+        </div>
+        <div class="individual-example">
+            <div class="example-number"><p></p></div>
+            <div class="ab-counter"><p class='ab'></p></div>
+            <div class="judgement"><p>*?</p></div>
+            <div class="example-sentence"><p>Example sentence</p></div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </div>
+<script src='js/reveal.js'></script>
+<script>
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+// Display the page number of the current slide
+slideNumber: true,
+// Push each slide change to the browser history
+history: true,
+// Vertical centering of slides
+center: false,
+// Transition speed
+transitionSpeed: 'slow', // default/fast/slow
+viewDistance: 200,
+menu: {
+themes: 
+[
+{ name: 'Sof', theme: 'css/theme/sof.css'},
+{ name: 'Moon', theme: 'css/theme/moon.css'},
+{ name: 'Blood', theme: 'css/theme/blood.css'},
+{ name: 'Beige', theme: 'css/theme/beige.css'},
+{ name: 'Night', theme: 'css/theme/night.css'},
+{ name: 'League', theme: 'css/theme/league.css'},
+{ name: 'Serif', theme: 'css/theme/serif.css'},
+{ name: 'Solarized', theme: 'css/theme/solarized.css'},
+{ name: 'White', theme: 'css/theme/white.css'},
+{ name: 'Sky', theme: 'css/theme/sky.css'},
+]
+},
+// Optional reveal.js plugins
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/zoom-js/zoom.js', async: true },
+{ src: 'plugin/notes/notes.js', async: true },
+{ src: 'plugin/reveal.js-menu/menu.js' },
+]
+});
+</script>
+<script src='js/mermaid.js'></script>
+<script>
+mermaid.initialize({
+theme: 'forest',
+logLevel: 3,
+flowchart: { curve: 'basis' },
+});
+</script>
+</body>
+</html>

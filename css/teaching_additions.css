@@ -1,25 +1,23 @@
+.reveal .slides .abex {
+  counter-reset: ab-counter 0;
+}
+
 body {
-    /* background: #fff; */
-    /* background-color: white; */
-    counter-reset: example-counter 0;
-    /* color: white; */
-  }
-  
-  .ex::before {
-    counter-increment: example-counter;
-    content:"(" counter(example-counter) ") ";
-  }
-  
-  .exg::before {
-    counter-increment: example-counter;
-    content:"(" counter(example-counter) ") ";
+    counter-reset: example-counter 0;    
     }
 
-  .exb::before {
+
+  
+.ex::before {
     counter-increment: example-counter;
-    content:"(" counter(example-counter) ") *";
-    padding-left: 2em;
+    content:"(" counter(example-counter) ") ";
   }
+  
+  .ab::before {
+    counter-increment: ab-counter;
+    content: counter(ab-counter, lower-latin) ".";
+  }
+  
   .reveal .logo {
     /* margin: 15px 0px; */
     background: rgba(255, 255, 255, 0);
@@ -27,8 +25,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
 
   }
-
-
 
 
   .reveal {
@@ -156,7 +152,6 @@ body {
 
 .container{
     display: flex;
-    align-items: center;
   }
   
   .col {
@@ -232,7 +227,7 @@ body {
       color: #205b9f;
     }
 
-.emphasisgreen {
+span.emphasisgreen {
   color: #039f64;
 }
 
@@ -268,13 +263,26 @@ span.emphasisorange {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-top: -1em;
+    /* margin-top: -1em; */
     /* font-size: em; */
   }
 
   .gloss-number-counter {
-    margin-top: .8em;
+    /* margin-top: .8em; */
+    width: 2em;
   }
+
+  .gloss-ab-counter {
+    /* margin-top: .8em; */
+    padding-left: 0.5em;
+  }
+
+.judgement {
+  /* margin-top: .8em; */
+  text-align: right;
+  padding-left: 0.5em;
+  width: 1em;
+}
 
   div.gloss_example {
     /* background: hsla(55, 99%, 80%, 50); */
@@ -283,14 +291,16 @@ span.emphasisorange {
    /* margin-top: -1.5em; */
    width: 90%;
          /* margin: 1em 0; */
+         margin-left: -1.5em;
   }
   
-  .reveal ol.sentence {
+ .reveal ol.sentence {
     display:inline;
     list-style-type: none;
     padding: 0em;
     /* margin-top: -2em; */
-  }
+  } 
+  /* .reveal  */
   
   ol.sentence li[lang=target]{
      /* font-weight:bold; */
@@ -322,61 +332,7 @@ span.emphasisorange {
     display: inline-block;
     /* padding-top: .5em; */
     margin-top: -0.5em;
-    margin-left: 1em;
+    margin-left: 2.5em;
   }
 
-/****** Advantages/Disadvantages ****/
-
-ul .adv {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.adv li {
-  list-style-type: none;
-  /* padding-left: 1em; */
-  text-indent: -1em;
-}
-
-.adv li::before {
-  content: "✔";
-  color:#37a500;
-    /* font-family: "Font Awesome 5 Free Solid"; */
-}
-
-ul .disadv {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.disadv li {
-  list-style-type: none;
-  /* padding-left: 1em; */
-  text-indent: -1em;
-}
-
-.disadv li::before {
-  content: "✘";
-  color:#df4736;
-    /* font-family: "Font Awesome 5 Free Solid"; */
-}
-
-.reveal pre {
-  display: block;
-  position: relative;
-  width: 90%;
-  margin: 20px auto;
-  text-align: left;
-  font-size: 0.55em;
-  font-family: monospace;
-  line-height: 1.2em;
-  word-wrap: break-word;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15); 
-}
-
-.inline {
-  color: red;
-  background-color: black;
-}
+  
