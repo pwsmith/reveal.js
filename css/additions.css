@@ -2,7 +2,6 @@ body {
     /* background: #fff; */
     /* background-color: white; */
     counter-reset: example-counter 0;
-    /* color: white; */
   }
   
   .ex::before {
@@ -37,7 +36,6 @@ body {
     /* font-size: 40px; */
     /* font-weight: normal; */
     /* color: #000; */
-    text-align: left
 }
   
   .reveal .front {
@@ -62,6 +60,7 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      text-align: left;
     }
   
   .reveal .level2 {
@@ -95,7 +94,7 @@ body {
   
   .reveal .front h1 {
   
-    font-size:2.5em;
+    font-size:2em;
     font-weight: 700;
     padding-top: 1em;
       /* font-family: 'Signika', sans-serif; */
@@ -156,7 +155,7 @@ body {
 
 .container{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .col {
@@ -223,6 +222,7 @@ body {
     border-bottom: none; }
   
 .reveal #map { height: 650px;
+  
     }
 
 .reveal #map2 { height: 650px;
@@ -262,69 +262,7 @@ span.emphasisorange {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0); }
 
 
-  /************** GLOSSING ************/
-
-  .gloss-outer-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: -1em;
-    /* font-size: em; */
-  }
-
-  .gloss-number-counter {
-    margin-top: .8em;
-  }
-
-  div.gloss_example {
-    /* background: hsla(55, 99%, 80%, 50); */
-    /* padding: 5px; */
-   overflow:auto;
-   /* margin-top: -1.5em; */
-   width: 90%;
-         /* margin: 1em 0; */
-  }
   
-  .reveal ol.sentence {
-    display:inline;
-    list-style-type: none;
-    padding: 0em;
-    /* margin-top: -2em; */
-  }
-  
-  ol.sentence li[lang=target]{
-     /* font-weight:bold; */
-     list-style-type: none;
-    padding: 0em;
-  }
-  
-  
-  ol.sentence li[lang=en_MORPH]{
-     /* font-family: monospace; */
-     list-style-type: none;
-    padding: 0;
-  
-  }
-  
-  ol.word {
-   /* padding: .5em; */
-   margin-bottom: .5em;
-   /* background: white; */
-   float:left;
-   /* border: 1px dotted #ccc; */
-   display: inline-block;
-   /* padding: 0em; */
-  }
-  
-  p.translation {
-    width: 90%;
-    float: left;
-    display: inline-block;
-    /* padding-top: .5em; */
-    margin-top: -0.5em;
-    margin-left: 1em;
-  }
-
 /****** Advantages/Disadvantages ****/
 
 ul .adv {
@@ -379,4 +317,18 @@ ul .disadv {
 .inline {
   color: red;
   background-color: black;
+}
+
+
+/* For UCL */
+
+.slidetitle{
+  font-weight: bold;
+}
+
+#mapht {
+
+  height: 650px;
+  
+
 }

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='author' content='Pete'>
+    <title>Complexity in VI Contexts</title>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui'>
+    <link rel='stylesheet' href='css/reset.css'>
+    <link rel='stylesheet' href='css/reveal.css'>
+    <link rel='stylesheet' type='text/css' href='js/leaflet/leaflet.css' />
+    <script type='text/javascript' src='js/leaflet/leaflet.js'></script>
+    <script type='text/javascript' src='js/leaflet/leafletembed.js'></script>
+    <script type='text/javascript' src='js/leaflet/numbermap.js'></script>
+    <link rel='stylesheet' href='css/theme/nest.css' id='theme'>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+<script src='reveal.js/lib/js/html5shiv.js'></script>
+<![endif]-->
+    <link rel='stylesheet' href='css/additions.css'>
+    <link rel='stylesheet' href='css/linguistic-examples.css'>
+</head>
+
+<body>
+    <div class='reveal'>
+        <div class='slides'>
+            <section class='front' id='title-slide'>
+                <div class='front_container'>
+                    <div class='front_info'>
+                        <p class='whitespace'></p>
+                        <p class='whitespace'></p>
+                        <h1 class='title'>Complexity in VI Contexts</h1>
+                        <p class='subtitle'></p>
+                        <p class='author'>Peter W. Smith</p>
+                        <p>Goethe-Universität Frankfurt</p>
+                        <p class='date'>14.03.2020</p>
+                    </div>
+                    <div class='front_logo'>
+                        <img class='logo' src='GU-Logo-schwarz.png'>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Intro</h2>
+                <ul>
+                    <li>What can VI see?</li>
+                    <li>How much information do we need to specify as part of a VI-entry?</li>
+                    <li>Is there a difference between the following:</li>
+                </ul>
+                <div class='example-container'>
+                    <div class='individual-example'>
+                        <div class='example-number'>
+                            <p class='ex'></p>
+                        </div>
+                        <div class='ab-counter'>
+                            <p class='ab'></p>
+                        </div>
+                        <div class='example-sentence'>
+                            <p><span class='sc'>[a]</span> ⇔ /b/</p>
+                        </div>
+                    </div>
+                    <div class='individual-example'>
+                    <div class='example-number'><p class=''></p></div>
+                    <div class='ab-counter'><p class='ab'></p></div>
+                    <div class='example-sentence'><p><span class='sc'>[a,a]</span> ⇔ /c/</p></div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section>
+                <h2>Intro</h2>
+                <ul>
+                    <li>Two case studies:</li>
+                    <ul>
+                        <li><a class='citation' href='https://link.springer.com/article/10.1007%2Fs11049-018-9425-0' data-citation-key='@smithetal2016'>Smith et al (2019)</a>: *ABA in case suppletion.</li>
+                        <li><a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.664/' data-citation-key='@issahsmith2018'>Issah & Smith (2020)</a>: Focus particle allomorphy in Dagbani.</li>
+                    </ul>
+                </ul>
+                <p class='whitespace'></p>
+                
+            </section>
+
+            <section>
+                <h2>Why?</h2>
+                <div class='container'>
+                    <div class='col'>
+                        <h3>No</h3>
+                        <ul>
+                            <li><a class='citation' href='https://muse.jhu.edu/article/539649' data-citation-key='@harbour2014'>Harbour (2014)</a>:<br> {a,a} = {a}</li>
+                            <li>Rules out numbers beyond trial.</li>
+                        </ul>
+                    </div>
+                    <div class='col'>
+                        <h3>Yes</h3>
+                        <ul>
+                            <!-- <li>Why the hell not?</li> -->
+                            <li>Morphology may not adhere to the same constraints as semantics</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="front">
+                <h1>*ABA in case suppletion</h1>
+            </section>
+
+            <section>
+                <h2>*ABA</h2>
+                <ul>
+                    <li><a class='citation' href='https://mitpress.mit.edu/books/universals-comparative-morphology' data-citation-key='@bobaljik2012'>Bobaljik (2012)</a>: Restrictions on adjective suppletion.</li>
+                    <li>For the triple <span class="italic">postive ~ comparative ~ superlative</span>:</li>
+                <ul>
+                    <li>AAA: <span class='italic'>smart ~ smarter ~ smartest</span></li>
+                    <li>ABB: <span class='italic'>good ~ better ~ best</span></li>
+                    <li>ABC: <span class='italic'>bonus ~ melior ~ optimus</span></li>
+                    <li>*AAB: <span class='italic'>good ~ gooder ~ best</span></li>    
+                    <li>*ABA: <span class='italic'>good ~ better ~ goodest</span></li>
+                </ul>
+                <!-- <li>Derived the missing patterns through containment and VI.</li> -->
+                </ul>
+            </section>
+            <section>
+                <h2>*ABA: Person</h2>
+                <ul>
+                    <li>
+                        <a class='citation' href='https://www.glossa-journal.org/article/10.5334/gjgl.362/' data-citation-key='@moskal2017'>Moskal (2018)</a>: Restrictions on clusivity suppletion.
+                    </li>
+                    <li>For the triple <span class='italic'>singular ~ exclusive ~ inclusive</span>:</li>
+                    <ul>
+                        <li>AAA: <span class='italic'>n̍ohi ~ n̍omi ~ n̍ode</span> (Tobelo)</li>
+                        <li>ABB: <span class='italic'>ten ~ ʔáré ~ ʔáŋ</span> (Kera)</li>
+                        <li>ABC: <span class='italic'>kuh ~ mih ~ tam</span> (Hanunoo)</li> 
+                        <li>AAB: <span class='italic'>ne ~ nere ~ le</span> (Terei)</li>
+                        <li>*ABA: <span class='italic'>ki ~ nieve ~ kian</span></li>
+
+                    </ul>
+                </ul>
+            </section>
+
+            <section>
+                <h2>*ABA: Number</h2>
+                <ul>
+                    <li><a class='citation' href='https://link.springer.com/article/10.1007%2Fs11049-018-9425-0' data-citation-key='@smithetal2016'>Smith et al (2019)</a>: Restrictions on number suppletion.</li>
+                    <li>For the triple <span class='italic'>singular ~ plural ~ dual</span>:</li>
+                    <ul>
+                        <li>AAA: <span class='italic'>ray ~ rom ~ ræw </span>(Awtuw)</li>
+                        <li>ABB: <span class='italic'>iou ~ kimaha ~ kimrau</span> (Kwamera)</li>
+                        <li>ABC: <span class='italic'>ngo ~ me ~ qe</span> (Bilua)</li>
+                        <li>AAB: <span class='italic'><td>angeice ~ angate ~ nyido</span> (Dehu)</li>
+                        <li>*ABA: <span class='italic'>ki ~ nieve ~ kian</span></li>
+                    </ul>
+                    <!-- <li class="fragment">Big caveat surrounding *ABA in number, regarding reversals of plural and dual.</li> -->
+                </ul>
+            </section>
+
+            <section>
+                <h2>*ABA: Generalisations</h2>
+                <ul>
+                    <li>*ABA consistently not found in suppletion triples.</li>
+                    <li>All other patterns consistently found
+                    <br>(*AAB in adjectives probably due to locality(<a class='citation' href='https://opencommons.uconn.edu/dissertations/892/' data-citation-key='@moskaldiss'>Moskal 2015</a>).</li>
+                    <li>*ABA seems genuinely impossible to derive.</li>
+                    <li class="fragment">Case is no different.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>*ABA: Case</h2>
+                <ul>
+                    <li><a class='citation' href='https://link.springer.com/article/10.1007%2Fs11049-018-9425-0' data-citation-key='@smithetal2016'>Smith et al (2019)</a>: restrictions on case suppletion.</li>
+                    <ul>
+                        <li>AAA: <span class='italic'>čun ~ čna ~ čaz</span> (Lezgian)</li>
+                        <li>ABB: <span class='italic'>ol ~ anɨ ~ aɣaa</span> (Khakas)</li>
+                        <li>ABC: <span class='italic'>zɨ ~ jä ~ as(ɨr) </span> (Khinalugh)</li>
+                        <li>AAB: <span class='italic'><td>narnaj ~ narnaj-(j)i ~ gunga</span> (Wardaman)</li>
+                    </ul>
+                    <li class="fragment">Triple as given in Smith et al (2019):<br> <span class='italic'>Case 1 ~ Case 2 ~ Case 3</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Case 1 ~ Case 2 ~ Case 3</h2>
+                <ul>
+                    <li>Categorising in this way to follow <a class='citation' href='https://web.mit.edu/alya/Public/print/Marantz_Case___Licensing.pdf' data-citation-key='@marantz1991'>Marantz (1991)</a>.</li>
+                    <li>Distinctions between:</li>
+                    <ul>
+                        <li>Unmarked case: nominative, absolutive</li>
+                        <li>Dependent case: accusative, ergative</li>
+                        <li>Lexical case: dative, instrumental <span class='italic'>etc.</span></li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section>
+                <div id="map"></div>
+                <!-- <h2>Map</h2> -->
+                <script class="stretch">
+                    initmap();
+
+                </script>
+            </section>
+
+            <section data-background-iframe="" data-background-interactive>
+                <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                    <h2>Iframe Backgrounds</h2>
+                    <p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
+                </div>
+            </section>
+
+            <!-- <section>
+    <h2 class="slidetitle">Hello</h2>
+    <ul>
+        <li>Hello</li>
+        <li>How does this  look for a long sentence?</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Some IPA</h2>
+    <ul>
+        <li>ɛ, ɣ, ʊ</li>
+    </ul>
+</section> -->
+
+
+
+        </div>
+    </div>
+    <script src='js/reveal.js'></script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            // Display the page number of the current slide
+            slideNumber: true,
+            // Push each slide change to the browser history
+            history: true,
+            // Vertical centering of slides
+            center: false,
+            // Transition speed
+            transitionSpeed: 'default', // default/fast/slow
+            viewDistance: 200,
+            menu: {
+                themes:
+                    [
+                        { name: 'Sof', theme: 'css/theme/sof.css' },
+                        { name: 'Moon', theme: 'css/theme/moon.css' },
+                        { name: 'Blood', theme: 'css/theme/blood.css' },
+                        { name: 'Beige', theme: 'css/theme/beige.css' },
+                        { name: 'Night', theme: 'css/theme/night.css' },
+                        { name: 'League', theme: 'css/theme/league.css' },
+                        { name: 'Serif', theme: 'css/theme/serif.css' },
+                        { name: 'Solarized', theme: 'css/theme/solarized.css' },
+                        { name: 'White', theme: 'css/theme/white.css' },
+                        { name: 'Sky', theme: 'css/theme/sky.css' },
+                    ]
+            },
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/reveal.js-menu/menu.js' },
+            ]
+        });
+    </script>
+    <script src='js/mermaid.js'></script>
+    <script>
+        mermaid.initialize({
+            theme: 'forest',
+            logLevel: 3,
+            flowchart: { curve: 'basis' },
+        });
+    </script>
+</body>
+
+</html>
